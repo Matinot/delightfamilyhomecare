@@ -1,0 +1,13 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.delightfamilyhomecare.com/$1 [R,L]
+
+<Limit GET POST>
+order deny, allow
+deny from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</limit>
+
